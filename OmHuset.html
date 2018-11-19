@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MainArticle.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <title>Om Huset</title>
+</head>
+
+
+
+<body>
+    <div class="container">
+
+
+
+        <div class="sideImage">
+
+        </div>
+
+        <div class="MainContent">
+
+            <div class="nav">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle" />
+
+            <a class="insta"></a>
+            <a class="facebook"></a>
+            <a class="twitter"></a>
+            <a class="flickr" ></a>
+            <a class="sprog">DA/EN</a>
+
+                <div class="burg">
+            </div>
+            <div class="links">
+                    <a class="link1">Link</a>
+                    <a class="link1">Link</a>
+                    <a class="link1">Link</a>
+                    <a class="link1">Link</a>
+                </div>
+
+        </div>
+        <div class="sorting">
+
+            <button class="menu-type" data-type="alle">
+
+            <a href="singleArticle.html?id=202">Om huset</a>
+            </button>
+            <button class="menu-type" data-type="Teater">Bliv frivillig</button>
+            <button class="menu-type" data-type="Fest">Kontakt Huset</button>
+
+        </div>
+
+        <main>
+            <section class="data-container">
+            </section>
+
+        </main>
+
+
+
+    </div>
+    <footer>
+
+            <div class="footer">
+
+                <div class="footerLinksContainer">
+
+
+                    <div class="linksContainer1">
+                        <div class="topText">
+                            <a class="adresse">Events</a>
+                        </div>
+
+                        <div class="bottomText">
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="linksContainer2">
+                        <div class="topText">
+                            <div class="soMeFooter"> Kontakt</div>
+                        </div>
+
+                        <div class="bottomText">
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="linksContainer3">
+                        <div class="topText">
+                            <a class="kontakt">Udlejning</a>
+                        </div>
+
+                        <div class="bottomText">
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="linksContainer4">
+                        <div class="topText">
+                            <a class="sponsor">Vær med</a>
+                        </div>
+
+                        <div class="bottomText">
+                             <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                            <a class="adresse">Lorem Ipsum</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="imagesFooter">
+                <img src="Huset_Event_page_ide-03.svg">
+                    <img src="Huset_Event_page_ide-04.svg">
+                    <img src="Huset_Event_page_ide-05.svg">
+                </div>
+
+            </div>
+
+
+
+        </footer>
+
+
+
+
+        <template class="temp">
+
+        <article class="eventContainer">
+
+            <div class="data-media">
+                <div class="data-image">
+                    <div class="data-billede" style="">
+
+                    </div>
+                </div>
+            </div>
+
+            <p class="data-info">
+            </p>
+
+            <p class="data-dato"></p>
+            <p class="data-tid"></p>
+            <p class="data-type"></p>
+            <p class="data-overskrift"></p>
+            <p class="data-sted"></p>
+            <p class="data-pris"></p>
+
+
+
+
+        </article>
+    </template>
+
+
+
+
+    </div>
+
+
+    <script>
+        let dest = document.querySelector(".data-container");
+
+        let jsonFile;
+
+        let Filter = "alle";
+
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        async function getJson() {
+
+            let myJson = await fetch("http://fuglevik.de/2.%20semester/huset/wordpress/index.php/wp-json/wp/v2/article");
+
+            jsonFile = await myJson.json();
+            showEvents();
+        }
+
+        document.querySelectorAll(".menu-type").forEach(knap => {
+            knap.addEventListener("click", showEvents)
+
+        });
+
+
+
+
+
+        function showEvents() {
+
+            let dest = document.querySelector(".data-container"),
+                temp = document.querySelector(".temp");
+
+
+
+            jsonFile.forEach(eventsAndet => {
+
+
+
+
+
+
+
+                let klon = temp.cloneNode(true).content;
+                /*Tager videoens ID fra et almindeligt youtube-link og sætter ind i et embed-link, så ethvert youtube-link kan indsættes i formularen*/
+
+
+
+
+
+
+
+
+
+
+
+                klon.querySelector(".data-overskrift").innerHTML = eventsAndet.acf.overskrift;
+                klon.querySelector(".data-info").innerHTML =  eventsAndet.acf.tekst;
+                klon.querySelector(".data-type").innerHTML = eventsAndet.acf.type;
+
+                klon.querySelector(".data-pris").innerHTML = "Pris: " + eventsAndet.acf.pris + "kr.";
+
+
+
+               if (eventsAndet.acf.splash != "")
+               {
+                klon.querySelector(".data-billede").style = "background-image: url(" + eventsAndet.acf.splash + ")";
+
+               } else {
+                   klon.querySelector(".data-billede").style = "background-image: url(" + "Huset_Event_page_ide-05.svg" + ")";
+               }
+
+                dest.appendChild(klon);
+
+            })
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,636 @@
+ body {
+     font-family: 'Nunito', sans-serif;
+     margin: auto;
+     background-color: black;
+ }
+
+
+ .container {
+     height: 100%;
+     background-color: #000000;
+     display: grid;
+     grid-template: 1fr/200px 1fr 5%;
+ }
+
+.sideImage{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    height: 50em;
+    background-image: url(Huset_logo_neon-02.svg);
+     background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    background-color: #000000;
+    grid-area: 1/1/1/1;
+}
+
+ .MainContent {
+     height: 100%;
+     grid-area: 1/2/1/2;
+ }
+
+ .data-container {
+     height: 100%;
+     color: #ffffff;
+     background-color: white;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+     margin-top: 17px;
+     grid-gap: 2px;
+ }
+
+ .logo {
+     display: none;
+ }
+
+ #box1 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     border: 20px solid black;
+     background-color: black;
+     background-image: url(ny_iconer/scene_stor.svg);
+     background-repeat: no-repeat;
+ }
+
+ #box2 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     border: 20px solid black;
+     background-color: black;
+     background-image: url(ny_iconer/events_stor.svg);
+     background-repeat: no-repeat;
+ }
+
+ #box3 {
+     grid-column-start: 3;
+     grid-column-end: 4;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     border: 20px solid black;
+     background-color: black;
+     background-image: url(ny_iconer/cafe_stor.svg);
+     background-repeat: no-repeat;
+ }
+
+ #box4 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 2;
+     grid-row-end: 3;
+     border-top: 30px solid black;
+     border-left: 20px solid black;
+     border-right: 20px solid black;
+     background-color: black;
+     background-image: url(ny_iconer/frivilig_stor.svg);
+     background-repeat: no-repeat;
+ }
+
+ #box5 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 2;
+     grid-row-end: 3;
+     border-top: 30px solid black;
+     border-left: 20px solid black;
+     border-right: 20px solid black;
+     background-color: black;
+     background-image: url(ny_iconer/om_stor.svg);
+     background-repeat: no-repeat;
+ }
+
+ #box6 {
+     grid-column-start: 3;
+     grid-column-end: 4;
+     grid-row-start: 2;
+     grid-row-end: 3;
+     border-top: 30px solid black;
+     border-left: 20px solid black;
+     border-right: 20px solid black;
+     background-color: black;
+     background-image: url(ny_iconer/info_stor.svg);
+     background-repeat: no-repeat;
+ }
+ /*********************************************************************************/
+
+ .nav {
+     height: 90px;
+     z-index: 1;
+     border-bottom: 2px solid white;
+     color: white;
+     background-color: black;
+     position: -webkit-sticky;
+     position: sticky;
+     top: 0;
+     z-index: 2;
+     display: grid;
+     grid-template-columns: 1fr;
+ }
+
+ button {
+     display: none;
+ }
+
+ .dropdown-content {
+     font-size: 100%;
+     white-space: nowrap;
+     color: white;
+     margin-top: 40px;
+ }
+
+ .dropdown-content {}
+
+ .dropdown-content a {
+     margin-right: 20px;
+     text-decoration: none;
+     font-size: 130%;
+     white-space: nowrap;
+     color: white;
+ }
+
+ .insta {
+     background-image: url(Huset_SoMe_links-02.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 4;
+     grid-column-end: 5;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 30px;
+ }
+
+ .facebook {
+     background-image: url(Huset_SoMe_links-04.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 5;
+     grid-column-end: 6;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 25px;
+ }
+
+ .twitter {
+     background-image: url(Huset_SoMe_links-03.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 6;
+     grid-column-end: 7;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 30px;
+ }
+
+ .flickr {
+     background-image: url(Huset_SoMe_links-01.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 7;
+     grid-column-end: 8;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 30px;
+ }
+
+ .dropbtn {
+     font-size: 2em;
+     margin-top: 35px;
+     display: none;
+ }
+ /*********************************************************************************/
+
+ .footer {
+    z-index: 1;
+    height: 170px;
+    background-color: #000000;
+    color: white;
+    border-top: 2px solid white;
+    z-index: 2;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 200px auto 380px;
+}
+
+.overskrift {
+    font-size: 120%;
+}
+
+a {
+     text-decoration: none;
+     font-size: 90%;
+     white-space: nowrap;
+     color: white;
+ }
+.adresse {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 120%;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.kontakt {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 120%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.sponsor {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.insta2 {
+    background-image: url(Huset_SoMe_links-02.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 30px;
+}
+
+.facebook2 {
+    background-image: url(Huset_SoMe_links-04.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 25px;
+}
+
+.twitter2 {
+    background-image: url(Huset_SoMe_links-03.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 30px;
+}
+
+.flickr2 {
+    background-image: url(Huset_SoMe_links-01.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 30px;
+}
+
+ /*********************************************************************************/
+
+ @media only screen and (max-width: 767px) {
+     .container {
+         background-color: #000000;
+         display: grid;
+         grid-template: 1fr/15px 1fr 15px;
+     }
+     .sideImage {
+         display: none;
+     }
+     .data-container {
+         height: 100%;
+         color: #ffffff;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr;
+     }
+     .logo {
+         display: block;
+     }
+     #box1 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         border-top: 30px solid black;
+         border-left: 20px solid black;
+         border-right: 20px solid black;
+         background-image: url(ny_iconer/scene_lille.svg);
+         background-repeat: no-repeat;
+     }
+     #box2 {
+         grid-column-start: 2;
+         grid-column-end: 3;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         border-top: 30px solid black;
+         border-left: 20px solid black;
+         border-right: 20px solid black;
+         background-image: url(ny_iconer/events_lille.svg);
+         background-repeat: no-repeat;
+     }
+     #box3 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-row-end: 3;
+         border-top: 30px solid black;
+         border-bottom: 30px solid black;
+         background-image: url(ny_iconer/cafe_lille.svg);
+         background-repeat: no-repeat;
+     }
+     #box4 {
+         grid-column-start: 2;
+         grid-column-end: 3;
+         grid-row-start: 2;
+         grid-row-end: 3;
+         border-top: 30px solid black;
+         border-bottom: 30px solid black;
+         background-image: url(ny_iconer/frivilig_lille.svg);
+         background-repeat: no-repeat;
+     }
+     #box5 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 3;
+         grid-row-end: 4;
+         background-image: url(ny_iconer/om_lille.svg);
+         background-repeat: no-repeat;
+     }
+     #box6 {
+         grid-column-start: 2;
+         grid-column-end: 3;
+         grid-row-start: 3;
+         grid-row-end: 4;
+         background-image: url(ny_iconer/info_lille.svg);
+         background-repeat: no-repeat;
+     }
+     button {
+         display: block;
+     }
+     .dropbtn {
+         display: block;
+         position: absolute;
+         top: 0px;
+         left: 90px;
+     }
+     .dropdown {
+         position: relative;
+     }
+     .dropdown-content {
+         display: none;
+         position: relative;
+         z-index: 1;
+         background-color: black;
+         margin: 0;
+         top: 2px;
+     }
+     .dropdown-content a {
+         text-decoration: none;
+         display: block;
+         font-size: 130%;
+         white-space: nowrap;
+         color: white;
+         text-align: left;
+     }
+     .show {
+         display: block;
+     }
+     .footer {
+        display: grid;
+        grid-template-columns: 50px 50px 20px 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 100px 1fr 1fr;
+        height: 500px;
+    }
+
+     .overskrift {
+    font-size: 120%;
+}
+
+    .adresse {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        font-size: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .kontakt {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 100%;
+        margin-top: 20px;
+    }
+    .sponsor {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 130%;
+    }
+    .insta2 {
+        background-image: url(Huset_SoMe_links-02.svg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-top: 30px;
+    }
+    .facebook2 {
+        background-image: url(Huset_SoMe_links-04.svg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-top: 25px;
+    }
+    .twitter2 {
+        background-image: url(Huset_SoMe_links-03.svg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        margin-top: 30px;
+    }
+    .flickr2 {
+        background-image: url(Huset_SoMe_links-01.svg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        margin-top: 30px;
+    }
+ }
+ .red {
+            color: red;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 4px;
+
+            box-sizing: border-box;
+
+            margin-top: 6px;
+
+            margin-bottom: 16px;
+
+
+        }
+
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .newsletter {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        @media screen and (min-width: 450px) {
+            .newsletter {
+                width: 450px;
+                margin: auto;
+
+            }
+        }
+
+        /* The Modal (background) */
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 2;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+
+        .modal-content {
+
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            border: 1px solid #888;
+            width: 460px;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #myBtn {
+            background: none !important;
+            color: white;
+            border: none;
+            padding: 0 !important;
+            font: inherit;
+            /*border is optional*/
+        }
+
+        #myBtn:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }

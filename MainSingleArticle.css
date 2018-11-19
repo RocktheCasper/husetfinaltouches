@@ -1,0 +1,780 @@
+ body {
+     font-family: 'Nunito', sans-serif;
+     margin: auto;
+     background-color: black;
+ }
+
+ .container {
+     height: 100%;
+     background-color: #000000;
+     display: grid;
+     grid-template: 1fr/200px 1fr 5%;
+ }
+
+ .sideImage {
+     position: -webkit-sticky;
+     position: sticky;
+     top: 20px;
+     height: 50em;
+     background-image: url(Huset_logo_neon-02.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: contain;
+     background-color: #000000;
+     grid-area: 1/1/1/1;
+ }
+
+ .MainContent {
+     height: 100%;
+     grid-area: 1/2/1/2;
+ }
+
+ .data-container {
+     height: 100%;
+     color: #ffffff;
+     background-color: #000000;
+     grid-gap: 2em;
+     display: grid;
+     grid-template-columns: 1fr;
+ }
+
+ .eventContainer {
+     height: 100%;
+     background-color: #000000;
+     border: 2px solid white;
+     grid-gap: 5px;
+     display: grid;
+     grid-template: 10px 50px 0.1fr 50px 0.1fr 15px/ 15px 1.7fr 10px 1fr 150px 15px;
+ }
+
+ .data-media {
+     grid-area: 3/2/3/6;
+     margin: 0;
+ }
+
+ .data-knap {
+     margin: 0;
+     text-align: left;
+     grid-area: 6/5/6/5;
+ }
+
+ .data-knap button {
+     font-size: 2em;
+     padding: 0;
+     text-decoration: none;
+     color: red;
+     border: none;
+     background-color: black;
+     cursor: pointer;
+ }
+
+ .data-knap button:hover {
+     padding: 10;
+     text-decoration: none;
+     color: #ffffff;
+     border: none;
+     background-color: #ff1717;
+     cursor: pointer;
+ }
+
+ .data-overSkrift {
+     font-size: 2.3em;
+     text-align: center;
+     grid-area: 2/2/2/6;
+ }
+
+ .data-overSkrift p {
+     margin: 0;
+ }
+
+ .data-praktisk {
+     font-size: 0.8em;
+     grid-area: 4/2/4/2;
+ }
+
+ .data-info {
+     font-size: 1.2em;
+     grid-area: 5/2/6/6;
+ }
+
+ .data-info p {
+     margin: 0;
+ }
+
+
+
+
+ .nav {
+     height: 90px;
+     z-index: 1;
+     border-bottom: 2px solid white;
+     color: white;
+     background-color: black;
+     position: -webkit-sticky;
+     position: sticky;
+     top: 0;
+     z-index: 2;
+     display: grid;
+     grid-template: 1fr 1fr/ 20px 100px 1fr 50px 50px 50px 110px 100px 20px;
+ }
+
+ .data-billede {
+     width: 100%;
+ }
+
+ #toggle:checked~.burg {
+     visibility: visible;
+ }
+
+ .burg {
+     visibility: hidden;
+     grid-area: 2/3/2/3;
+ }
+
+ .links {
+     grid-area: 2/1/2/4;
+     font-size: 2em;
+ }
+
+ .link1 {
+     padding: 1em;
+ }
+
+ .insta {
+     background-image: url(Huset_SoMe_links-02.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-area: 2/4/2/4;
+ }
+
+ .facebook {
+     background-image: url(Huset_SoMe_links-04.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-area: 2/5/2/5;
+ }
+
+ .twitter {
+     background-image: url(Huset_SoMe_links-03.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-area: 2/6/2/6;
+ }
+
+ .flickr {
+     background-image: url(Huset_SoMe_links-01.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-area: 2/7/2/7;
+ }
+
+ .sprog {
+     font-size: 2em;
+     grid-area: 2/8/2/8;
+ }
+
+ label {
+     font-size: 2em;
+     grid-area: 2/2/2/2;
+ }
+
+ #toggle {
+     display: none;
+ }
+
+ .footer {
+     z-index: 1;
+     height: 170px;
+     background-color: #000000;
+     color: white;
+     border-top: 2px solid white;
+     z-index: 2;
+     margin-top: 2em;
+     display: grid;
+     grid-template-columns: 50px 50px 50px 50px 200px auto 380px;
+ }
+
+ .overskrift {
+     font-size: 120%;
+ }
+
+ a {
+     text-decoration: none;
+     font-size: 90%;
+     white-space: nowrap;
+     color: white;
+ }
+
+ .adresse {
+     grid-column-start: 5;
+     grid-column-end: 6;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     font-size: 120%;
+     margin-top: 20px;
+     margin-left: 25px;
+ }
+
+ .kontakt {
+     grid-column-start: 6;
+     grid-column-end: 7;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     font-size: 120%;
+     margin-top: 20px;
+     margin-left: 10px;
+ }
+
+ .sponsor {
+     grid-column-start: 7;
+     grid-column-end: 8;
+     grid-row-start: 1;
+     grid-row-end: 2;
+ }
+
+ .insta2 {
+     background-image: url(Huset_SoMe_links-02.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 30px;
+ }
+
+ .facebook2 {
+     background-image: url(Huset_SoMe_links-04.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 25px;
+ }
+
+ .twitter2 {
+     background-image: url(Huset_SoMe_links-03.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 3;
+     grid-column-end: 4;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 30px;
+ }
+
+ .flickr2 {
+     background-image: url(Huset_SoMe_links-01.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 4;
+     grid-column-end: 5;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 30px;
+ }
+
+ .topText {
+     font-size: 1.5em;
+     text-align: left;
+     width: 6em;
+ }
+
+ .bottomText {
+     margin-top: 0.5em;
+     line-height: 1.5em;
+     text-align: left;
+     width: 8em;
+ }
+
+ .linksContainer2 {
+     font-size: 1em;
+     grid-area: 1/2/1/2;
+ }
+
+ .linksContainer3 {
+     font-size: 1em;
+     grid-area: 1/3/1/3;
+ }
+
+ .linksContainer4 {
+     font-size: 1em;
+     grid-area: 1/4/1/4;
+ }
+
+ @media only screen and (max-width: 767px) {
+     .container {
+         background-color: #000000;
+         display: grid;
+         grid-template: 1fr/15px 1fr 15px;
+     }
+     .sideImage {
+         display: none;
+     }
+
+     .data-overSkrift p {
+         font-size: 1.5em;
+         margin: 0;
+     }
+     .data-praktisk {
+         font-size: 0.8em;
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 2;
+     }
+
+     .data-info2 {
+         margin: 0;
+         font-size: 1.2em;
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 2;
+     }
+ }
+
+ .TopMenu {
+
+
+     height: 2em;
+     padding: 1em;
+     padding-left: 0em;
+     text-align: center;
+
+
+ }
+
+.data-button {
+
+   display: grid;
+     width: 100%;
+    grid-gap: 1em;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.data-BStyle{
+    border: none;
+    background-color: black;
+
+    font-size: 1.2em;
+}
+
+
+.data-BStyle:hover{
+    border: none;
+    background-color: #ff2d2d;
+
+    font-size: 1.2em;
+}
+
+.data-BStyle a{
+   color: white;
+}
+
+.data-BStyle a:hover{
+   color: black;
+}
+
+ .MainContent {
+     height: 100%;
+     grid-area: 1/2/1/2;
+ }
+
+ .logo {
+     display: none;
+ }
+
+ .nav {
+     height: 90px;
+     z-index: 1;
+     border-bottom: 2px solid white;
+     color: white;
+     background-color: black;
+     position: -webkit-sticky;
+     position: sticky;
+     top: 0;
+     z-index: 2;
+     display: grid;
+     grid-template-columns: 1fr;
+ }
+
+ .dropdown-content {
+     font-size: 100%;
+     white-space: nowrap;
+     color: white;
+     margin-top: 40px;
+ }
+
+ .dropdown-content a {
+     margin-right: 20px;
+     text-decoration: none;
+     font-size: 130%;
+     white-space: nowrap;
+     color: white;
+ }
+
+ .insta {
+     background-image: url(Huset_SoMe_links-02.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 4;
+     grid-column-end: 5;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 30px;
+ }
+
+ .facebook {
+     background-image: url(Huset_SoMe_links-04.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 5;
+     grid-column-end: 6;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 25px;
+ }
+
+ .twitter {
+     background-image: url(Huset_SoMe_links-03.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 6;
+     grid-column-end: 7;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 30px;
+ }
+
+ .flickr {
+     background-image: url(Huset_SoMe_links-01.svg);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     width: 50px;
+     height: 50px;
+     font-size: 2em;
+     grid-column-start: 7;
+     grid-column-end: 8;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     margin-top: 30px;
+ }
+
+ .dropbtn {
+     font-size: 2em;
+     margin-top: 35px;
+     display: none;
+ }
+
+ @media only screen and (max-width: 767px) {
+
+     .data-button {
+
+   display: grid;
+
+     width: 100%;
+    grid-gap: 1em;
+     grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+     .TopMenu{
+        height: auto;
+     }
+
+     .sideImage {
+         display: none;
+     }
+     .logo {
+         display: block;
+     }
+     a {
+         padding: 1px;
+         text-decoration: none;
+     }
+     .dropbtn {
+         display: block;
+         position: absolute;
+         top: 0px;
+         left: 90px;
+     }
+     .dropdown {
+         position: relative;
+     }
+     .dropdown-content {
+         display: none;
+         position: relative;
+         z-index: 1;
+         background-color: black;
+         margin: 0;
+         top: 2px;
+     }
+     .dropdown-content a {
+         text-decoration: none;
+         display: block;
+         font-size: 130%;
+         white-space: nowrap;
+         color: white;
+         text-align: left;
+     }
+     .show {
+         display: block;
+     }
+     .eventContainer {
+         height: 100%;
+         background-color: #000000;
+         border: 2px solid white;
+         grid-gap: 5px;
+         display: grid;
+         grid-template: 30px auto auto/10px 1fr 10px;
+     }
+     .data-overSkrift {
+         font-size: 1em;
+         text-align: center;
+         grid-area: 1/1/2/3;
+     }
+     .data-info {
+         font-size: 1.2em;
+         grid-area: 5/5/3/2;
+     }
+     .data-media {
+         grid-area: 2/2/2/3;
+     }
+     .footer {
+         display: grid;
+         grid-template-columns: 50px 50px 20px 1fr 1fr 1fr 1fr;
+         grid-template-rows: 50px 100px 1fr 1fr;
+         height: 500px;
+     }
+     .overskrift {
+         font-size: 120%;
+     }
+     .adresse {
+         grid-column-start: 5;
+         grid-column-end: 8;
+         grid-row-start: 1;
+         grid-row-end: 3;
+         font-size: 100%;
+         margin-top: 20px;
+         margin-left: 0;
+     }
+     .kontakt {
+         grid-column-start: 1;
+         grid-column-end: 5;
+         grid-row-start: 3;
+         grid-row-end: 4;
+         font-size: 100%;
+         margin-top: 20px;
+     }
+     .sponsor {
+         grid-column-start: 5;
+         grid-column-end: 7;
+         grid-row-start: 3;
+         grid-row-end: 4;
+         font-size: 130%;
+     }
+     .insta2 {
+         background-image: url(Huset_SoMe_links-02.svg);
+         background-repeat: no-repeat;
+         background-size: 100% auto;
+         width: 50px;
+         height: 50px;
+         font-size: 2em;
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         margin-top: 30px;
+     }
+     .facebook2 {
+         background-image: url(Huset_SoMe_links-04.svg);
+         background-repeat: no-repeat;
+         background-size: 100% auto;
+         width: 50px;
+         height: 50px;
+         font-size: 2em;
+         grid-column-start: 2;
+         grid-column-end: 3;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         margin-top: 25px;
+     }
+     .twitter2 {
+         background-image: url(Huset_SoMe_links-03.svg);
+         background-repeat: no-repeat;
+         background-size: 100% auto;
+         width: 50px;
+         height: 50px;
+         font-size: 2em;
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-row-end: 2;
+         margin-top: 30px;
+     }
+     .flickr2 {
+         background-image: url(Huset_SoMe_links-01.svg);
+         background-repeat: no-repeat;
+         background-size: 100% auto;
+         width: 50px;
+         height: 50px;
+         font-size: 2em;
+         grid-column-start: 2;
+         grid-column-end: 3;
+         grid-row-start: 2;
+         grid-row-end: 2;
+         margin-top: 30px;
+     }
+ }
+ .red {
+            color: red;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 4px;
+
+            box-sizing: border-box;
+
+            margin-top: 6px;
+
+            margin-bottom: 16px;
+
+
+        }
+
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .newsletter {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        @media screen and (min-width: 450px) {
+            .newsletter {
+                width: 450px;
+                margin: auto;
+
+            }
+        }
+
+        /* The Modal (background) */
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 2;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+
+        .modal-content {
+
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            border: 1px solid #888;
+            width: 460px;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #myBtn {
+            background: none !important;
+            color: white;
+            border: none;
+            padding: 0 !important;
+            font: inherit;
+            /*border is optional*/
+        }
+
+        #myBtn:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+

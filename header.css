@@ -1,0 +1,270 @@
+.MainContent {
+    height: 100%;
+    grid-area: 1/2/1/2;
+}
+
+.logo {
+    display: none;
+}
+
+.nav {
+    height: 90px;
+    z-index: 1;
+    border-bottom: 2px solid white;
+    color: white;
+    background-color: black;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.dropdown-content {
+    font-size: 100%;
+    white-space: nowrap;
+    color: white;
+    margin-top: 40px;
+}
+
+
+.dropdown-content a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 130%;
+    white-space: nowrap;
+    color: white;
+}
+
+.insta {
+    background-image: url(Huset_SoMe_links-02.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 30px;
+}
+
+.facebook {
+    background-image: url(Huset_SoMe_links-04.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 25px;
+}
+
+.twitter {
+    background-image: url(Huset_SoMe_links-03.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 30px;
+}
+
+.flickr {
+    background-image: url(Huset_SoMe_links-01.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 30px;
+}
+
+.dropbtn {
+    font-size: 2em;
+    margin-top: 35px;
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .sideImage {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    a {
+        padding: 1px;
+        text-decoration: none;
+    }
+
+    .dropbtn {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 90px;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        z-index: 1;
+        background-color: black;
+        margin: 0;
+        top: 2px;
+    }
+
+    .dropdown-content a {
+        text-decoration: none;
+        display: block;
+        font-size: 130%;
+        white-space: nowrap;
+        color: white;
+        text-align: left;
+    }
+
+    .show {
+        display: block;
+    }
+
+}
+
+#myBtn {
+    background-image: url(ny_iconer/nyhedsbrev.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    max-width: 10vw;
+    height: 50px;
+    font-size: 2em;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 30px;
+}
+
+.red {
+    color: red;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    margin-top: 6px;
+
+    margin-bottom: 16px;
+
+
+}
+
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.newsletter {
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+@media screen and (min-width: 450px) {
+    .newsletter {
+        width: 450px;
+        margin: auto;
+
+    }
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

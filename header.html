@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <title>Landing</title>
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="sideImage">
+        </div>
+        <div class="MainContent">
+
+            <div class="nav">
+                <div class="dropdown">
+                    <img class="logo" src="ny_iconer/App_Ikon_Huset_Artboard200px.svg" style="width:90px">
+                    <label onclick="myFunction()" class="dropbtn">&#9776;</label>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="">Scene</a>
+                        <a href="indhold.html">Events</a>
+                        <a href="">Café</a>
+                        <a href="">Frivillig</a>
+                        <a href="OmHuset.html">Om huset</a>
+                        <a href="">Info</a>
+                    </div>
+                </div>
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn"></button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="newsletter">
+                            <form>
+
+                                <label for="fname">Navn <span class="red">*</span></label>
+                                <input type="text" id="fname" name="firstname" placeholder="Dit navn.." required>
+
+                                <label for="lname">Email <span class="red">*</span></label>
+                                <input type="text" id="lname" name="lastname" placeholder="Din e- mail adresse.." required>
+
+                                <label for="country">Sprog <span class="red">*</span></label>
+                                <select id="country" name="country">
+                                    <option value="dansk">Dansk</option>
+                                    <option value="engelsk">Engelsk</option>
+                                </select>
+
+
+                                <input type="submit" value="Submit">
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="https://www.instagram.com/husetkbh/" class="insta"></a>
+                <a href="https://www.facebook.com/Huset.Koebenhavn" class="facebook"></a>
+                <a href="https://twitter.com/HusetKBH" class="twitter"></a>
+                <a href="https://www.flickr.com/photos/135006755@N04/" class="flickr"></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        let svartekst = "";
+        document.querySelector("form").addEventListener("submit", ajaxCall);
+        async function ajaxCall(e) {
+            e.preventDefault();
+            let navn = this.querySelector("input[type=text]").value = "";
+        }
+
+        function show(response) {
+            document.querySelector("#response").textContent = svartekst;
+        }
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
